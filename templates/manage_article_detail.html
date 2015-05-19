@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block detail %}
+<a class="btn btn-primary" href="/newarticle" role="button">新建文章</a>
+<a class="btn btn-primary" href="/articlelist" role="button">文章列表</a>
+<h1>文章列表</h1>
+<div class="panel panel-default">
+      <div class="panel-heading">
+          <h3 class="panel-title">{{res['title']}}</h3>
+          <p>创建时间:{{res['create_time']}}</p>
+      </div>
+      <div class="panel-body">
+          {{res['content']}}
+      </div>
+</div>
+
+{% end %}

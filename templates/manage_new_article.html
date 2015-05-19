@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block detail %}
+<a class="btn btn-primary" href="/newarticle" role="button">新建文章</a>
+{% if uinfo %}
+<p>write</p>
+<form action="/newarticle?uid={{uinfo['_id']}}" method="POST">
+    <p>文章标题：</p>
+    <input type="text" name="title" />
+    <p>文章内容</p>
+    <input type="textarea" name="content" />   
+    <input type="submit" value="Submit" />
+</form>
+{% else %}
+<p>请先登录</p>
+{% end %}
+{% end %}
